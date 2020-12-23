@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 *{
@@ -5,18 +7,87 @@
     padding: 0px;
 }
 
-html {
-  height: 1600px;
-}
-
 body {
-  font-family: 'Exo', sans-serif;
   color: white;
+  background
+  font-family: 'Fira Mono';
 }
 
+/* Overide CSS */
+.section {
+  padding: 0px;
+}
+
+/* ========== Intro CSS ======== */
+.intro {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top:36%;
+  text-align: center;
+  color: #90adc0;
+  font-size: 50px;
+}
+
+.intro h1, h4, p {color: #90adc0;}
+
+/* Intro Heading CSS */
+.intro h1 {font-family: 'Fira Mono', monospace;}
+.intro span {color: white;}
+.intro h4 {font-family: 'Fira Mono', monospace;font-size:40px;}
+
+/* Buttons CSS */
+.intro a {
+  border: 3px solid #BBE1FA;
+  border-radius: 3px;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: transparent;
+  color: #A0B2BB;
+  margin: 5px;
+  padding: 10px 40px 10px 40px;
+  font-family: 'Exo', monospace;
+  font-size: 20px;
+  transition:0.3s;
+}
+
+.resume-btn:hover {
+  cursor:not-allowed;
+}
+
+.proj-btn:hover {
+  color: #1B262C;
+  cursor: pointer;
+  background-color: #BBE1FA;
+}
+/* ========== END ======== */
+
+/* ========== Project Page CSS ======== */
 .projects {
-  
-  background-color: #1B262C;
+  /*background-color: #1B262C;*/
+  background: rgb(17,17,25);
+  background: -moz-linear-gradient(0deg, rgba(17,17,25,1) 22%, rgba(27,38,44,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(17,17,25,1) 22%, rgba(27,38,44,1) 100%);
+  background: linear-gradient(0deg, rgba(17,17,25,1) 22%, rgba(27,38,44,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#111119",endColorstr="#1b262c",GradientType=1);
   width: 100%;
   height:100vh;
+  
+  text-align: center;
+  padding: 5% 20% 20% 20%;
+}
+
+.card {
+  color: white;
+  height: 260px;
+  background-color: #2f414b;
+}
+.column {padding-top: 0.5rem;padding-bottom: 0.5rem;} /* Override Columns */
+/* ========= Sliding Card CSS ========== */
+.slick-slide {
+  width: 100%;
+}
+
+.item {
+  margin: 0.5rem;
 }
