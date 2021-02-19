@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Dubai Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dubai Bold'), url('fonts/Dubai-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dubai Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dubai Medium'), url('fonts/Dubai-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dubai Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dubai Regular'), url('fonts/Dubai-Regular.woff') format('woff');
+}

@@ -9,7 +9,6 @@
 
 body {
   color: white;
-  background
   font-family: 'Fira Mono';
 }
 
@@ -54,8 +53,16 @@ body {
 .resume-btn:hover {
   cursor:not-allowed;
 }
+.spin {
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-.proj-btn:hover {
+.proj-btn:hover, .resume-btn-enabled:hover {
   color: #1B262C;
   cursor: pointer;
   background-color: #BBE1FA;
@@ -73,16 +80,67 @@ body {
   width: 100%;
   height:100vh;
   
-  text-align: center;
   padding: 5% 20% 20% 20%;
 }
 
-.card {
+.projects h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 32px;
+}
+.proj-card {
   color: white;
   height: 260px;
+  padding: 20px;
+  border-radius: 10px;
   background-color: #2f414b;
 }
+
+.proj-card h1 {
+  font-family: 'Dubai Medium';
+  text-align: left;
+  margin: 60px 0px 0px 0px;
+}
+
+.proj-card p {
+  font-family: 'Dubai Regular';
+  font-size: 18px;
+  text-align: left;
+}
+
+.proj-card-pLink {
+  color: #BBE1FA;
+}
+
+.proj-card-header img {
+  float: left;
+}
+
+.proj-card-header ul .lang {
+  color: #A0B2BB;
+  padding: 10px 0px 0px 10px;
+  float: right;
+}
+
+.proj-card-git a {
+  float: right;
+  font-size: 1.8em;
+  color: #A0B2BB;
+  padding: 0px 0px 0px 10px;
+}
+
+.proj-card-git a:hover {
+  color: #BBE1FA;
+  cursor: pointer;
+}
+
+.proj-card-git a:focus,
+.proj-card-git a:active {
+  outline: none; /* Remove Borders on Github Icon */
+}
+
 .column {padding-top: 0.5rem;padding-bottom: 0.5rem;} /* Override Columns */
+
 /* ========= Sliding Card CSS ========== */
 .slick-slide {
   width: 100%;
@@ -91,3 +149,5 @@ body {
 .item {
   margin: 0.5rem;
 }
+
+/* ========== PROJECT PAGE END ======== */
