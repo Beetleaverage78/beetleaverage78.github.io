@@ -12,14 +12,16 @@ $(document).ready(function () {
 
 
 // Google SpreadSheets Integration for Projects
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1mhngZ4ZWVUClnUTZ3JdkV6wtIKOem-VULX75VuY3liU/edit?usp=sharing';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQnuAP42qT4s1NzBa6CzxUe_usSaW6S5hUONJPZwfNBM2pCWCXmFhN6a9R8n0YuL4SMl3kPFiWv_U2Z/pub?gid=0&single=true&output=csv';
 
 
 function init() {
-  Tabletop.init({
-    key: publicSpreadsheetUrl,
-    callback: showProject,
-    simpleSheet: true,
+  Papa.parse(publicSpreadsheetUrl, {
+    download: true,
+    header: true,
+    complete: function(results) {
+      showProject(results.data);
+    }
   });
 };
 
