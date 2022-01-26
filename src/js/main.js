@@ -50,6 +50,7 @@ function showProject(data, tabletop) {
     var projCardHeaderDiv = document.createElement('div');
     projCardHeaderDiv.classList.add('proj-card-header');
 
+    // Stack Icon Creation
     var stackIcon = document.createElement('img');
     stackIcon.setAttribute('src', "assets/stack.png");
     stackIcon.setAttribute('alt', "project");
@@ -58,11 +59,24 @@ function showProject(data, tabletop) {
     var gitAnch = document.createElement('a');
     var gitIcon = document.createElement('i');
 
+    // Github Link Icon Creation
     gitAnch.setAttribute('target', "_blank");
     gitAnch.setAttribute('href', e.githubLink);
+    gitAnch.setAttribute('title', "Github Link");
 
     gitIcon.classList.add('fab', 'fa-github');
     gitAnch.appendChild(gitIcon);
+
+    // External Link Icon Creation
+    var extAnch = document.createElement('a');
+    var extLinkIcon = document.createElement('i');
+
+    extAnch.setAttribute('target', "_blank");
+    extAnch.setAttribute('href', e.projLink);
+    extAnch.setAttribute('title', "Click for a live page");
+
+    extLinkIcon.classList.add('fas', "fa-external-link-alt");
+    extAnch.appendChild(extLinkIcon);
 
     var Ul = document.createElement('ul');
 
@@ -70,8 +84,14 @@ function showProject(data, tabletop) {
     gitLink.classList.add('proj-card-git');
     gitLink.appendChild(gitAnch);
 
-    Ul.appendChild(gitLink);
+    var extLink = document.createElement('li');
+    extLink.classList.add('proj-card-link');
+    extLink.appendChild(extAnch);
 
+    Ul.appendChild(gitLink);
+    if (e.projLink !== "N/A") {Ul.appendChild(extLink);}
+    
+    // Grab Programming Languages
     var langArray = e.projLang.split(',');
     langArray.forEach(async function (lang) {
       var langLi = document.createElement('li');

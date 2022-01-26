@@ -129,13 +129,22 @@ body {
   padding: 0px 0px 0px 10px;
 }
 
-.proj-card-git a:hover {
+.proj-card-link a {
+  float: right;
+  font-size: 1.3em;
+  color: #A0B2BB;
+  padding: 5px 0px 0px 10px;
+}
+
+.proj-card-git a:hover, .proj-card-link a:hover {
   color: #BBE1FA;
   cursor: pointer;
 }
 
 .proj-card-git a:focus,
-.proj-card-git a:active {
+.proj-card-git a:active,
+.proj-card-link a:focus,
+.proj-card-link a:active {
   outline: none; /* Remove Borders on Github Icon */
 }
 
